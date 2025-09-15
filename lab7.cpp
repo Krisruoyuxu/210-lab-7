@@ -15,6 +15,8 @@ int main() {
     reverseArray(array);
     displayArray(array, "Reversed array");
 
+    delete[] array;
+    
     return 0;
 }
 
@@ -22,8 +24,8 @@ void reverseArray(string*arr){
     string temp;
     for (int i = 0; i < (SIZE / 2); i++){
         temp = *(arr+i);
-        *(arr+i) = *(arr+SIZE-1);
-        *(arr+SIZE-1) = temp;
+        *(arr+i) = *(arr+(SIZE-i-1));
+        *(arr+(SIZE-i-1)) = temp;
     }
 }
 
