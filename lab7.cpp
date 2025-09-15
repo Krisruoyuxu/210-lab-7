@@ -17,7 +17,12 @@ int main() {
 }
 
 void reverseArray(string*arr){
-
+    string temp;
+    for (int i = 0; i < SIZE; i++){
+        temp = *(arr+i);
+        *(arr+i) = *(arr+SIZE-1);
+        
+    }
 }
 
 void displayArray(string*arr){
